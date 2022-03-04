@@ -1,0 +1,207 @@
+/*========= HOME SECTION START =========*/
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 2rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.addBgHeader{
+        background-color: $background-white;
+        box-shadow: $shadow-sm;
+    }
+
+    .brand{
+        font-size: $fs-2-5;
+        font-weight: $we-bold;
+        color: #183153;
+        i{
+            color: $main-color;
+        }
+    }
+
+    .header-right{
+        @include flexbox();
+
+        .navbar{
+            .nav_link{
+                font-size: 1.7rem;
+                font-weight: $we-medium;
+                color: $text-color;
+                margin: 0 1.75rem;
+                position: relative;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -1.25rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0rem;
+                    height: 1rem;
+                    line-height: 1rem;
+                    background-color: #FF9F0D;
+                    border-radius: 50%;
+                    -webkit-transition: .4s linear;
+                    transition: .3s ease-in-out;
+                }
+
+                &.active::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -1.25rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 1rem;
+                    height: 1rem;
+                    line-height: 1rem;
+                    background-color: #FF9F0D;
+                    border-radius: 50%;
+                }
+
+                &:hover::after{
+                    width: 1rem;
+                }
+            }
+        }
+
+        .header-icons{
+            @include flexbox();
+            gap: 3rem;
+            .inline-icon{
+                font-size: $fs-2;
+                color: $text-color;
+                cursor: pointer;
+            }
+
+            .fa-shopping-cart:hover{
+                color: #007aff;
+            }
+
+            .btn-booking{
+                margin-top: 0;
+                cursor: context-menu;
+                box-shadow: $shadow-sm;
+
+                &:hover{
+                    border-color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    #navToggle{
+        display: none;
+    }
+}
+
+// ===>> HERO SECTION <<===
+.hero{
+    position: relative;
+    background: url(../images/shape-1.png) no-repeat;
+    background-size: contain;
+    background-position: right top;
+    padding-top: 14rem;
+    @include flexbox();
+    flex-wrap: wrap;
+    
+    .hero-content{
+        flex: 1 1 45rem;
+
+        .hero-title{
+            padding-bottom: 2rem;
+            line-height: 1.1;
+
+            #content2::before{
+                content: '\a';
+                white-space: pre;
+            }
+        }
+
+        .hero-text{
+            font-size: $fs-1-8;
+            font-weight: $we-medium;
+            padding: 1rem 0;
+
+            #content2::before{
+                content: '\a';
+                white-space: pre;
+            }
+        }
+
+        .hero-btn{
+            font-weight: $we-medium;
+            background: $main-color;
+            color: $text-white;
+
+            &:hover{
+                background-color: #FFFFFF;
+                color: $main-color;
+            }
+            &:hover i{
+                color: $text-title;
+            }
+        }
+
+    }
+
+    .hero-image{
+        flex: 1 1 45rem;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .sub-hero-image{
+        position: absolute;
+        bottom: -25rem;
+        left: -6px;
+    }
+}
+
+.category{
+    margin-top: 24rem;
+    padding: 3rem 14%;;
+    text-align: center;
+
+    .cate-container{
+        @include grid(25rem);
+        gap: 3rem;
+
+        .cate-box{
+            background-color: #FFFFFF;
+            box-shadow: $shadow-sm;
+            padding: 2rem;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+
+            .cate-icon{
+                margin: 0 auto;
+                width: 5rem;
+                height: 5rem;
+                background: $main-color;
+                border-radius: 50%;
+
+                i{
+                    font-size: $fs-2-5;
+                    line-height: 5rem;
+                    color: #FFFFFF;
+                }
+            }
+
+            .cate-title{
+                font-size: $fs-2;
+                font-weight: $we-bold;
+                color: $text-title;
+                padding: 1rem 0;
+            }
+
+            .cate-text{
+                font-weight: $we-medium;
+                color: $text-light-md;
+            }
+        }
+    }
+    
+
+}

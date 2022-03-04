@@ -1,0 +1,41 @@
+/* ============ GOOGLE FONT ============  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ================== VARIABLE CSS ==================*/
+    $main-color: #FF9F0D;
+    $main-foreground: #FF8560;
+    $main-foreground-2: #22cbff;
+    $main-light-md: #FFA387;
+    $main-light-sm: #FFE0D7;
+
+    $background-body: #F9FAFC;
+    $background-white: #FFFFFF;
+
+    $text-title: #252521;
+    $text-color : #111827;
+    $text-white: #FFFFFF;
+    $text-light-md : #606060;
+    $text-light-sm: #909090;
+
+    $shadow-sm: 0 1px 4px hsla(152, 4%, 15%, .1);
+    $shadow-md: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+    /* Font Size */
+    $fs-1-5: 1.5rem;
+    $fs-1-6: 1.6rem;
+    $fs-1-8: 1.8rem;
+    $fs-2: 2rem;
+    $fs-2-5: 2.5rem;
+    $fs-3: 3rem;
+    $fs-4: 4rem;
+    $fs-5: 5rem;
+   
+    /* Font Weight */
+    $we-medium: 500;
+    $we-semi-bold: 600;
+    $we-bold: 700;
+
+    /* Line height */
+    $line-sm: 1;
+    $line-md: 1.5;
+    $line-lg: 1.75;

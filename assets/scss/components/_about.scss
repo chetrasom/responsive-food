@@ -1,0 +1,177 @@
+/*========= ABOUT SECTION START =========*/
+.about{
+    position: relative;
+    margin-top: 6rem;
+    @include flexbox();
+    flex-wrap: wrap;
+    gap: 0;
+    background: url(../images/shape-2.png) no-repeat;
+    background-size: contain;
+    background-position: left;
+
+    .about-image{
+        flex: 1 1 45rem;
+    }
+
+    .about-content{
+        flex: 1 1 45rem;
+
+        .about-sub{
+            font-size: $fs-1-6;
+            font-weight: $we-bold;
+            color: $main-color;
+        }
+        .about-title{
+            font-weight: $we-bold;
+            padding-bottom: 2rem;
+        }
+        .about-text{
+            font-weight: $we-medium;
+            line-height: 1.8;
+            padding: 1rem 0;
+        }
+
+        .about-group-btn{
+            margin-top: 2rem;
+            @include flexbox();
+
+            .about-btn{
+                background-color: $main-color;
+                color: #FFFFFF;
+
+                &:hover{
+                    background-color: #FFFFFF;
+                    color: $main-color;
+                }
+            }
+
+            .btn-play{
+                @include flexbox();
+                align-self: flex-end;
+                font-size: $fs-1-6;
+                font-weight: $we-medium;
+                color: $text-light-md;
+
+                &:hover{
+                    color: $main-color;
+                    cursor: pointer;
+                    .about-icon{
+                        transform: translateX(1rem);
+                    }
+                }
+
+                .about-icon{
+                    font-size: $fs-4;
+                }
+            }
+        }
+
+        .break-content::before{
+            content: '\a';
+            white-space: pre;
+        }
+    }
+
+    .popup-video{
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 1000;
+        background: rgba(0,0,0,0.7);
+        height: 100%;
+        width: 100%;
+        display: none;
+
+        .video{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 750px;
+            border-radius: 5px;
+            border: 3px solid #fff;
+            object-fit: cover;
+        }
+
+        .close{
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 50px;
+            color: #fff;
+            font-weight: bolder;
+            z-index: 1000;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.work{
+    position: relative;
+    margin-top: 6rem;
+    overflow: hidden;
+
+    .sub-work-image{
+        position: absolute;
+        top: 0rem;
+        right: -1rem;
+        z-index: -1;
+    }
+    .heading{
+        .heading-subtitle{
+            font-weight: $we-bold;
+        }
+        .heading-title{
+            font-weight: $we-bold;
+        }
+        .heading-info{
+            font-weight: $we-medium;
+            line-height: 1.8;
+        }
+    }
+
+    .break-content::before{
+        content: '\a';
+        white-space: pre;
+    }
+
+    .work-container{
+        margin-top: 10rem;
+        @include grid(25rem);
+        gap: 6rem;
+    
+        .work-box{
+            min-height: 30rem;
+            background-color: #FFFFFF;
+            box-shadow: $shadow-sm;
+            padding: 6rem 1rem;
+            text-align: center;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+    
+        .work-icon{
+            margin: 0 auto;
+
+            i{  
+                //padding-top: 3rem;
+                font-size: $fs-5;
+                line-height: 5rem;
+                color: $main-color;
+                }
+            }
+    
+            .work-title{
+                font-size: $fs-2-5;
+                font-weight: $we-bold;
+                color: $text-title;
+                padding: 4rem 0;
+            }
+    
+            .work-text{
+                font-weight: $we-medium;
+                color: $text-light-md;
+            }
+        }
+    }
+        
+}

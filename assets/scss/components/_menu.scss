@@ -1,0 +1,111 @@
+/*========= MENU SECTION START =========*/
+.menu{
+    margin-top: 6rem;
+
+    .break-content::before{
+        content: '\a';
+        white-space: pre;
+    }
+
+    .heading{
+        .heading-subtitle{
+            font-weight: $we-bold;
+        }
+        .heading-title{
+            font-weight: $we-bold;
+        }
+        .heading-info{
+            font-weight: $we-medium;
+            line-height: 1.8;
+        }
+
+        .btn-menu{
+            margin-top: 6rem;
+            background-color: $main-color;
+            color: #FFFFFF;
+
+            &:hover{
+                color: $main-color;
+                background-color: #FFFFFF;
+            }
+        }
+    }
+
+    .menu-container{
+        @include grid(31rem);
+        gap: 6rem;
+
+        .menu-box{
+            position: relative;
+            background-color: $background-white;
+            box-shadow: $shadow-md;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+
+            &:hover{
+                transform: translateY(-1rem);
+                .menu-image{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .menu-image{
+                height: 25rem;
+                overflow: hidden;
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+               
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            .menu-content{
+                padding: 3rem;
+
+                .menu-title{
+                    @include flexbox();
+                    justify-content: space-between;
+
+                    .price{
+                        font-size: $fs-4;
+                        color: $main-color;
+                    }
+                }
+
+                .menu-text{
+                    padding: 1.5rem 0;
+                }
+
+                .menu-stars{
+                    padding-top: 2rem;
+                    i{
+                        font-size: $fs-1-8;
+                        color: $main-color;
+                    }
+                }
+            }
+
+            .menu-add{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                min-width: 12rem;
+                text-align: center;
+                background: $main-color;
+                border-top-left-radius: 50px;
+                
+                i{
+                    font-size: $fs-4;
+                    color: #FFFFFF;
+                    padding: 2rem;
+                }
+            }
+        }
+    }
+}

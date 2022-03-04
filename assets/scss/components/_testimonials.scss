@@ -1,0 +1,91 @@
+/*========= TESTIMONIALS SECTION START =========*/
+.testimonials{
+    position: relative;
+    overflow: hidden;
+
+    .subtle-image{
+        position: absolute;
+        right: 0;
+        top: -22px;
+        z-index: -1;
+    }
+
+    .break-content::before{
+        content: '\a';
+        white-space: pre;
+    }
+
+    .heading{
+        .heading-subtitle{
+            font-weight: $we-bold;
+        }
+        .heading-title{
+            font-weight: $we-bold;
+        }
+        .heading-info{
+            font-weight: $we-medium;
+            line-height: 1.8;
+        }
+    }
+
+    .testi-slide{
+        
+        .testi-wrap{
+            height: auto;
+            padding: 2rem 0;
+            .slide{
+                text-align: center;
+                background-color: #FFFFFF;
+                box-shadow: $shadow-md;
+                padding: 2.5rem;
+                border-top-right-radius: 50px;
+                border-bottom-left-radius: 50px;
+                transition: .3s linear;
+
+                &:hover{
+                    transform: translateY(-1rem);
+                    background-color: $main-color;
+
+                    .stars{
+                        i{
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+
+                .testi-image{
+                    width: 10rem;
+                    height: 10rem;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    box-shadow: $shadow-sm;
+                    overflow: hidden;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .testi-text{
+                    padding: 1.5rem 0;
+                }
+
+                .stars{
+                    i{
+                        padding: 2rem 0;
+                        font-size: 1.8rem;
+                        color: #FF9F0D;
+                    }
+                }
+
+                .testi-username{
+                    font-size: $fs-1-8;
+                    font-weight: $we-bold;
+                    color: $text-color;
+                }
+            }
+        }
+    }
+}
